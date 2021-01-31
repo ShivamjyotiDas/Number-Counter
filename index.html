@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number counter</title>
+</head>
+<body>
+	<!--Main-->
+<form name="MainForm" class="Main" onsubmit="return false">
+	<input type="button" name="OneLess" value="Lower Count" onclick="minusNum()">
+	<input type="text" name="num" value="0" id="M" style="text-align: center;font-family: Rockwell;font-size: 25px;">
+	<input type="button" name="OneMore" value="Higher Count" onclick="addNum()">
+</form>
+	<!--Javascript-->
+<script type="text/javascript">
+	function addNum(){
+		var number = Number(document.MainForm.num.value);
+		var result = number + 1;
+		document.MainForm.num.value=result;
+	}
+	function minusNum(){
+		var Minusnum = Number(document.MainForm.num.value);
+		var res = Minusnum - 1;
+		document.MainForm.num.value=res;
+		if(Minusnum=="Hello"){
+			Minusnum = "Don't Disturb";
+		}
+	}
+</script>
+	<!--Styling-->
+<style type="text/css">
+    body{
+    	background-color: pink;
+    }
+    .Main{
+    	margin-top: 250px;
+    	margin-left: 400px;
+
+    }
+</style>
+</body>
+</html>
